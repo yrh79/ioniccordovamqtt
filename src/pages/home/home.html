@@ -7,8 +7,32 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>服务器地址</ion-label>
+      <ion-input type="text" [(ngModel)]="mqttserver"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>端口</ion-label>
+      <ion-input type="text" [(ngModel)]="mqttport"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>连接用户名</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>连接密码</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button icon-start block (click)="onConnect()">
+    <ion-icon name='md-done-all'></ion-icon>
+    搞定!
+  </button>
+
 </ion-content>
